@@ -28,7 +28,7 @@
         <thead>
           <tr>
             <th v-for="(f, index) in fields" :key="index" :class="floatHead" @click="sortField(f)">
-              <slot :field="f">
+              <slot name="header" :field="f">
                 <span>{{ f.label || f.name }}</span>
               </slot>
               <i
@@ -48,7 +48,6 @@
                     :placeholder="f.label || f.name"
                     v-model="columnsFilter[f.name]"
                   >
-                  55555
                 </div>
               </div>
             </th>
