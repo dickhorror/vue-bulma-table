@@ -23,6 +23,7 @@
         </div>
       </div>
     </nav>
+    <div class="box">อีหยังวะนิ</div>
     <div class="datatable-wrapper" :style="{maxHeight: scrollable ? bodyHeight : null}">
       <table :class="tableClass">
         <thead>
