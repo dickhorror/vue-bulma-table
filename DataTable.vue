@@ -28,7 +28,9 @@
         <thead>
           <tr>
             <th v-for="(f, index) in fields" :key="index" :class="floatHead" @click="sortField(f)">
-              <span>{{ f.label || f.name }}</span>
+              <slot :field="f">
+                <span>{{ f.label || f.name }}</span>
+              </slot>
               <i
                 v-if="sort1.field === f.name"
                 :class="sort1.order === 'asc' ? 'fa-caret-up': 'fa-caret-down'"
